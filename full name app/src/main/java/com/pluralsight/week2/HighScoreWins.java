@@ -6,7 +6,33 @@ import java.util.regex.Pattern;
 public class HighScoreWins {
 
     public static void main(String[] args) {
-        find_winner();
+        //find_winner();
+        winner();
+    }
+
+    public static void winner() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a score");
+        String gameScore = scanner.nextLine().trim();
+
+        String[] teams_score = gameScore.split(Pattern.quote("|")); // splitting Home:Visitor|21:9 -> ["Home:Visitor", "21:9"]
+
+        String[] teams = teams_score[0].split(Pattern.quote(":")); // splitting "Home:Visitor" -> ["Home","Visitor"]
+
+        String[] score = teams_score[1].split(Pattern.quote(":")); // // splitting "21:9" -> ["21","9"]
+
+        int score1 = Integer.parseInt(score[0]); // makes "21" -> 21
+        int score2 = Integer.parseInt(score[1]); // makes "9" -> 9
+
+
+        if (score1 > score2){
+            System.out.println("\nWinner: " + teams[0] + "\nScore: " + score1 + " vs " + teams[1] + " " + score2);
+        }else if (score1 < score2){
+            System.out.println("\nWinner: " + teams[1] + "\nScore: " + score2 + " vs " + teams[0] + " " + score1);
+        }else{
+            System.out.println("\nTied: " + teams[0] + "\nScore: " + score1 + " vs " + teams[1] + " " + score2);
+        }
+
     }
 
     private static void find_winner() {

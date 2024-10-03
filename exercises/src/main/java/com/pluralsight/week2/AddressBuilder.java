@@ -59,6 +59,7 @@ public class AddressBuilder {
             builder.append(state).append(" ");
             builder.append(zip);
 
+
             builder.append("\n\nShipping Address:\n");
             builder.append(ship_street).append("\n");
             builder.append(ship_city).append(", ");

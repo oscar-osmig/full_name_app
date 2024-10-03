@@ -15,6 +15,9 @@ public class CellPhone {
         this.owner = "";
     }
 
+    public void DisplayCell(String model, String carrier , String owner, int serial_number, String phone_number){
+        System.out.println("\n | " + model + " | " + carrier + " | " + owner + " | " + serial_number + " | " + phone_number + " | ");
+    }
 
     public String getModel() {
         return model;

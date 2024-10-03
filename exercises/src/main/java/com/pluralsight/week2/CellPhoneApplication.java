@@ -32,8 +32,7 @@ public class CellPhoneApplication
         cellPhone.setPhone_number(number);
         cellPhone.setOwner(owner);
 
-        System.out.println(cellPhone.getPhone_number());
-
+        cellPhone.DisplayCell(model, carrier, owner, serial_num, number);
 
     }
 }

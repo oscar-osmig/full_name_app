@@ -18,13 +18,15 @@ public class TheaterReservations {
         System.out.println("What date will you be coming (MM/dd/yyyy):");
         String date = scanner.nextLine();
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/dd/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         LocalDate the_date = LocalDate.parse(date, formatter);
 
         System.out.println("How many tickets would you like?");
-        String tickets = scanner.nextLine();
+        int tickets = scanner.nextInt();
 
-        System.out.println("\n\n" + tickets + " tickets reserved for " + the_date + " under " + name_parts[0] + ", " + name_parts[1]);
+        String ticket = tickets == 1 ? "ticket" : "tickets";
+
+        System.out.println("\n\n" + ticket + " tickets reserved for " + the_date + " under " + name_parts[1] + ", " + name_parts[0]);
 
 
     }

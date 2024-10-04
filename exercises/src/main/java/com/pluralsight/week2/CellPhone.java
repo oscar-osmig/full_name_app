@@ -20,7 +20,7 @@ public class CellPhone {
     }
 
     public void dial(String phone){
-        System.out.println(this.owner + " is dialing " + "'" + phone + "'");
+        System.out.println(this.owner + "'s is dialing " + "'" + phone + "'");
     }
 
     public String getModel() {

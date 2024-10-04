@@ -5,7 +5,7 @@ public class CellPhone {
     private String model;
     private String carrier;
     private String phone_number;
-    private String owner;
+    private static String owner;
 
     public CellPhone(){
         this.serial_number = 0;
@@ -15,8 +15,12 @@ public class CellPhone {
         this.owner = "";
     }
 
-    public void DisplayCell(String model, String carrier , String owner, int serial_number, String phone_number){
+    public static void DisplayCell(String model, String carrier, String owner, int serial_number, String phone_number){
         System.out.println("\n | " + model + " | " + carrier + " | " + owner + " | " + serial_number + " | " + phone_number + " | ");
+    }
+
+    public void dial(String phone){
+        System.out.println(this.owner + " is dialing " + "'" + phone + "'");
     }
 
     public String getModel() {

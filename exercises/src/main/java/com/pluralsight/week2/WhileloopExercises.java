@@ -10,7 +10,7 @@ public class WhileloopExercises {
         while(run){
             System.out.println("Hi " + count);
             random= Math.random();
-            if(random < 0.5){
+            if(random > 0.5){
                 run = false;
             }
             count++;
@@ -48,7 +48,7 @@ public class WhileloopExercises {
         //hi();        // WHILE LOOP
         //evenNums();  // FOR LOOP
         //iLove();     // FOR EACH LOOP
-        noMonkeys(); // BONUS EXERCISES
+        //noMonkeys(); // BONUS EXERCISES
 
     }
 }
